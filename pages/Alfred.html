@@ -2,66 +2,191 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machinya</title>
+    <title>Machinya Skills Chart</title>
     <style>
         body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    background-color: #f0f0f0;
-}
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
 
-.skills-chart {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    max-width: 500px;
-    margin: auto;
-}
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
 
-.skill {
-    background-color: #007BFF;
-    color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
+        .section-title {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
 
-.skill:hover {
-    transform: scale(1.1);
-    background-color: #0056b3;
-}
+        .skills-chart {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skill {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .skill:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .skill-bar {
+            background-color: #e0e0e0;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .skill-level {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 5px;
+            width: 0;
+            border-radius: 5px 0 0 5px;
+            text-align: right;
+            transition: width 1s ease;
+        }
+
+        .skill-progress {
+            margin-top: 5px;
+            font-style: italic;
+        }
 
     </style>
 </head>
 <body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Skills Chart</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <div class="header">
+        <h1>Alfred Machinya</h1>
+        <h2>Course: Business Intelligence & Data Analytics</h2>
+        <h3>School: Botswana Accountancy College</h3>
+        <h4>Year: 1</h4>
+    </div>
+    <div class="section-title">
+        <h2>Design Skills</h2>
+    </div>
     <div class="skills-chart">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Python</div>
-        <div class="skill">Java</div>
+        <div class="skill">
+            <div class="skill-name">HTML</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 90%;">90%</div>
+            </div>
+            <div class="skill-progress">Learning for: 2 years</div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">CSS</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 25%;">25%</div>
+            </div>
+            <div class="skill-progress">Learning for: 1.5 years</div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 15%;">15%</div>
+            </div>
+            <div class="skill-progress">Learning for: 1 year</div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Python</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 0%;">0%</div>
+            </div>
+            <div class="skill-progress">Learning for: 6 months</div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Java</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 4%;">4%</div>
+            </div>
+            <div class="skill-progress">Learning for: 3 months</div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Graphic Design</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 60%;">60%</div>
+            </div>
+            <div class="skill-progress">Learning for: 2 years</div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Data Analytics</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 3%;">3%</div>
+            </div>
+            <div class="skill-progress">Learning for: 1 month</div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Visual Arts</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 83%;">83%</div>
+            </div>
+            <div class="skill-progress">Learning for: 3 months</div>
+        </div>
+    </div>
+    <div class="section-title">
+        <h2>Sports Skills</h2>
+    </div>
+    <div class="skills-chart">
+        <div class="skill">
+            <div class="skill-name">Chess</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 85%;">85%</div>
+            </div>
+            <div class="skill-progress">Playing for: Almost everyday</div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Soccer</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 45%;">45%</div>
+            </div>
+            <div class="skill-progress">Playing for: Sometimes</div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Basketball</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 11%;">11%</div>
+            </div>
+            <div class="skill-progress">Playing for: A few days</div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Tennis</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 30%;">30%</div>
+            </div>
+            <div class="skill-progress">Playing for: On phone</div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Swimming</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 0%;">0%</div>
+            </div>
+            <div class="skill-progress">Playing for: I don't want to die, iyooo!!!</div>
+        </div>
     </div>
     <script src="script.js"></script>
-</body>
-</html>
-    
-
-    <script src="alfred.js"></script>
 </body>
 </html>
